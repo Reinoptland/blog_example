@@ -18,9 +18,14 @@ Profile.create([
   {bio: "Andrea de Cesaris (31 May 1959 – 5 October 2014) was an Italian racing driver. He started 208 Formula One Grands Prix but never won, holding the record for the longest career without a race victory.", user: andrea}
   ])
 
-post_code_in_rails = Post.create(title: "How to code in Rails", post: "Great, great explanation", user: karl)
-post_models =  Post.create(title: "Models", post: "All the great Rails Models", user: karl)
-post_relations =  Post.create(title: "Relations", post: "All the great Relations", user: kamui)
+tag_rails = Tag.create(tag: "rails")
+tag_ruby = Tag.create(tag: "ruby")
+tag_html = Tag.create(tag: "html")
+tag_css = Tag.create(tag: "css")
+
+post_code_in_rails = Post.create(title: "How to code in Rails", post: "Great, great explanation", user: karl, tags: [tag_rails, tag_ruby])
+post_models =  Post.create(title: "Models", post: "All the great Rails Models", user: karl, tags: [tag_rails, tag_ruby, tag_html, tag_css])
+post_relations =  Post.create(title: "Relations", post: "All the great Relations", user: kamui, tags: [tag_html, tag_css])
 
 Comment.create([
   {comment: "Great article", user: jj, post: post_code_in_rails},
