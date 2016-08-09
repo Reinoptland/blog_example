@@ -21,3 +21,9 @@ Profile.create([
 post_code_in_rails = Post.create(title: "How to code in Rails", post: "Great, great explanation", user: karl)
 post_models =  Post.create(title: "Models", post: "All the great Rails Models", user: karl)
 post_relations =  Post.create(title: "Relations", post: "All the great Relations", user: kamui)
+
+Comment.create([
+  {comment: "Great article", user: jj, post: post_code_in_rails},
+  {comment: "Meh", user: jj, post: post_models},
+  {comment: "Frist post!", user: andrea, post: post_code_in_rails}
+  ])
